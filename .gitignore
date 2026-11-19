@@ -1,0 +1,24 @@
+# Python environments and local tooling, at any repository depth.
+.venv/
+venv/
+env/
+**/.venv/
+**/venv/
+**/env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+
+# Secrets and local configuration.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Raw DialOp downloads and extracted source data.
+**/data/raw/*.zip
+**/data/raw/*.jsonl
+**/data/raw/*.json

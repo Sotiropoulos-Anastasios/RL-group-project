@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+
+# Keep the downloaded DialOp source outside the shared repository.
+data/raw/*.zip
+data/raw/itinerary.jsonl
+data/raw/mediation.jsonl
+data/raw/optimization.jsonl
