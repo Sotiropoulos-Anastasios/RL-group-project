@@ -1,0 +1,15 @@
+{
+  "source": "data/raw/optimization.jsonl",
+  "task": "reviewer_assignment",
+  "num_episodes": 134,
+  "num_actions": 2068,
+  "episode_splits": {
+    "train": 94,
+    "validation": 20,
+    "test": 20
+  },
+  "split_method": "Sort episode IDs by SHA-256 digest; assign the final 15% to test, the preceding 15% to validation, and the remainder to train.",
+  "reward_definition": "normalized_score = proposal_reward / best_assignment_reward; best_assignment_reward is DialOp's pooled-observation reference.",
+  "scaling_definition": "visible_player_cell = int(oracle_table_cell * player_scale); hidden_player_cell = null; oracle_table is unchanged.",
+  "privacy_note": "oracle_table is for the environment/evaluator; expose only one player's scaled private view to an agent"
+}

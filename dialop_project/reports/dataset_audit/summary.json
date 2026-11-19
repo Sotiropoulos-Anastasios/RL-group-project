@@ -1,0 +1,29 @@
+{
+  "valid": true,
+  "raw_input": "data/raw/optimization.jsonl",
+  "episodes": 134,
+  "actions": 2068,
+  "split_counts": {
+    "test": 20,
+    "train": 94,
+    "validation": 20
+  },
+  "action_counts": {
+    "message": 1610,
+    "proposal": 231,
+    "proposal_response": 227
+  },
+  "flat_action_counts": {
+    "message": 1610,
+    "proposal": 231,
+    "proposal_response": 227
+  },
+  "normalized_score": {
+    "mean": 0.921126,
+    "min": 0.6152597402597403,
+    "max": 1.0
+  },
+  "scaling_definition": "DialOp: int(oracle_table_cell * player_scale) for visible cells; null for hidden cells; oracle_table remains unscaled.",
+  "reward_definition": "normalized_score = proposal_reward / best_assignment_reward; best_assignment_reward is the pooled-observation reference from DialOp.",
+  "issues": []
+}
